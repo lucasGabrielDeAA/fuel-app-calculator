@@ -21,6 +21,9 @@ class MyApp extends StatelessWidget {
 }
 
 class HomePage extends StatelessWidget {
+  var gasTextController = new MoneyMaskedTextController();
+  var alcTextController = new MoneyMaskedTextController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,8 +31,8 @@ class HomePage extends StatelessWidget {
       body: ListView(
         children: <Widget>[
           Logo(),
-          InputRow(label: "Álcool", textInputController: new MoneyMaskedTextController()),
-          InputRow(label: "Gasolina", textInputController: new MoneyMaskedTextController()),
+          InputRow(label: "Álcool", textInputController: gasTextController),
+          InputRow(label: "Gasolina", textInputController: alcTextController),
         ],
       ),
     );
